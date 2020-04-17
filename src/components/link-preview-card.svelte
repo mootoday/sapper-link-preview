@@ -1,15 +1,14 @@
-
 <script>
-	import { onMount } from "svelte";
+  import { onMount } from "svelte";
 	
-	export let href;
+  export let href;
   export let show = false;
 	
-	let title;
-	let description;
-	let imgSrc;
+  let title;
+  let description;
+  let imgSrc;
 	
-	onMount(() => {
+  onMount(() => {
     fetch("/link-preview.json?href=" + href)
       .then(response => response.json())
       .then(linkData => {
@@ -44,15 +43,15 @@
 </style>
 
 {#if show}
-	<div class="card">
+  <div class="card">
     {#if imgSrc}
-  		<img src={imgSrc} alt={title} class="card-img-top">
+  	  <img src={imgSrc} alt={title} class="card-img-top">
     {/if}
-		<div class="card-body">
-			<h5 class="card-title">{title}</h5>
+    <div class="card-body">
+      <h5 class="card-title">{title}</h5>
       {#if description}
-  			<p class="card-text">{description}</p>
+        <p class="card-text">{description}</p>
       {/if}
-		</div>
-	</div>
+    </div>
+  </div>
 {/if}

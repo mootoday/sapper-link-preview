@@ -1,5 +1,5 @@
 <script>
-	import LinkPreviewCard from "./link-preview-card.svelte";
+  import LinkPreviewCard from "./link-preview-card.svelte";
 
   export let href;
 
