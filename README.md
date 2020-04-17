@@ -16,7 +16,7 @@ with a single component:
 
 The above renders as:
 
-![Link Preview Example](./docs/sapper-preview-example.png "Logo Title Text 1")
+![Link Preview Example](./docs/sapper-link-preview-example.png "Logo Title Text 1")
 
 
 The component uses the following information in the HTML:
