@@ -1,8 +1,6 @@
 <script>
   import LinkPreviewCard from "./link-preview-card.svelte";
 
-  export let href;
-
   let showPreviewCard = false;
 </script>
 
@@ -12,7 +10,7 @@
   }
 </style>
 
-<a {href} {...$$restProps} on:mouseover={() => showPreviewCard = true} on:mouseleave={() => showPreviewCard = false}>
+<a href={$$props.href} {...$$props} on:mouseover={() => showPreviewCard = true} on:mouseleave={() => showPreviewCard = false}>
   <slot />
-  <LinkPreviewCard {href} show={showPreviewCard} />
+  <LinkPreviewCard href={$$props.href} show={showPreviewCard} />
 </a>
